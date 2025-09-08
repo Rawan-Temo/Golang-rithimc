@@ -10,6 +10,11 @@ import (
 func UserRouter(api fiber.Router) {
 	api.Get("/" ,AuthFunc ,controllers.AllUsers)
 	api.Post("/" ,AuthFunc ,controllers.CreateUser)
+	api.Get("/:id" ,AuthFunc ,controllers.SingleUser)
+	api.Patch("/:id" ,AuthFunc ,controllers.UpdateUser)
+	api.Delete("/:id" ,AuthFunc ,controllers.DeleteUser)
+	api.Post("/login"  ,controllers.Login)
+
 }
 func AuthFunc(c *fiber.Ctx) error {
     fmt.Print("Authentication logic here\n")

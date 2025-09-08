@@ -6,7 +6,7 @@ import (
 	"github.com/Rawan-Temo/Golang-rithimc.git/models"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
-	"gorm.io/gorm/logger" 
+	"gorm.io/gorm/logger"
 )
 
 type DbInstance struct {
